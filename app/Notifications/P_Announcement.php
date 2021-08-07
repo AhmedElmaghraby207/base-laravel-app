@@ -3,8 +3,8 @@
 namespace App\Notifications;
 
 use App\Channels\FireBaseChannel;
-use App\NotificationTemplate;
-use App\Setting;
+use App\Models\NotificationTemplate;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Config;
 
 class P_Announcement extends _BaseNotification

@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-use App\Setting;
+use App\Models\Setting;
 use sngrl\PhpFirebaseCloudMessaging\Client;
 use sngrl\PhpFirebaseCloudMessaging\Message;
 use sngrl\PhpFirebaseCloudMessaging\Notification;

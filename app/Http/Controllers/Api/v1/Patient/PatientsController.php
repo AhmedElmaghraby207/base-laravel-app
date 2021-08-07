@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\v1\Patient;
 
 use App\Facades\PatientAuthenticateFacade as PatientAuth;
-use App\Patient;
+use App\Models\Patient;
 use App\Transformers\PatientTransformer;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

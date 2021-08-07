@@ -10,8 +10,8 @@
 
     <title> @yield('title') </title>
 
-    <link rel="apple-touch-icon" href="{{App\Setting::where('key', 'icon_image')->first() ? url(App\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{App\Setting::where('key', 'icon_image')->first() ? url(App\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
+    <link rel="apple-touch-icon" href="{{App\Models\Setting::where('key', 'icon_image')->first() ? url(App\Models\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{App\Models\Setting::where('key', 'icon_image')->first() ? url(App\Models\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
@@ -59,8 +59,8 @@
                 <li class="nav-item mr-auto">
                     <a class="navbar-brand" href="{{route('home')}}">
                         <img class="brand-logo" alt="modern admin logo" style="border-radius: 50%"
-                             src="{{App\Setting::where('key', 'logo_image')->first() ? url(App\Setting::where('key', 'logo_image')->first()->value) : url("assets/images/logo.png")}}">
-                        <h3 class="brand-text">{{App\Setting::where('key', 'website_name')->first() ? App\Setting::where('key', 'website_name')->first()->value : "Base App"}}</h3>
+                             src="{{App\Models\Setting::where('key', 'logo_image')->first() ? url(App\Models\Setting::where('key', 'logo_image')->first()->value) : url("assets/images/logo.png")}}">
+                        <h3 class="brand-text">{{App\Models\Setting::where('key', 'website_name')->first() ? App\Models\Setting::where('key', 'website_name')->first()->value : "Base App"}}</h3>
                     </a>
                 </li>
                 <li class="nav-item d-none d-md-block float-right">
@@ -103,10 +103,10 @@
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                             <span class="mr-1">
                                 @lang('admin.hello_text'), <span
-                                    class="user-name text-bold-700">{{App\Admin::find(session()->get('user_admin')->id)->name}}</span>
+                                    class="user-name text-bold-700">{{App\Models\Admin::find(session()->get('user_admin')->id)->name}}</span>
                             </span>
                             <span class="avatar avatar-online">
-                                <img src="{{url(App\Admin::find(session()->get('user_admin')->id)->image)}}"
+                                <img src="{{url(App\Models\Admin::find(session()->get('user_admin')->id)->image)}}"
                                      style="height: 37px"
                                      alt="avatar"><i></i>
                             </span>
@@ -142,7 +142,7 @@
 <footer class="footer footer-static footer-light navbar-border navbar-shadow">
     <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
       <span class="d-block d-md-inline-block">@lang('dashboard.copyrights_word') {{\Carbon\Carbon::now()->format('Y')}}
-          <span class="text-bold-700">{{App\Setting::where('key', 'website_name')->first() ? App\Setting::where('key', 'website_name')->first()->value : "Base App"}}</span>@lang('dashboard.copyrights_text')
+          <span class="text-bold-700">{{App\Models\Setting::where('key', 'website_name')->first() ? App\Models\Setting::where('key', 'website_name')->first()->value : "Base App"}}</span>@lang('dashboard.copyrights_text')
       </span>
     </p>
 </footer>

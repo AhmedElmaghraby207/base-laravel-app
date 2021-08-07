@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Announcement;
+use App\Models\Announcement;
 use App\Mail\PatientAnnouncement;
 use App\Notifications\P_Announcement;
-use App\Patient;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;

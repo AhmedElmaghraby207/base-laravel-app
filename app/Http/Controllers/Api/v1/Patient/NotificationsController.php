@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\v1\Patient;
 
 use App\Facades\PatientAuthenticateFacade as PatientAuth;
 use App\Helpers\CommonHelper;
-use App\Notification;
+use App\Models\Notification;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -33,7 +33,7 @@ class NotificationsController extends PatientApiController
         $limit = 10; /* Limit per page */
 
         $notifications = Notification::query()->where("notifiable_id", $patient->id)
-            ->where("notifiable_type", "App\Patient")->latest()->paginate($limit);
+            ->where("notifiable_type", "App\Models\Patient")->latest()->paginate($limit);
 
         foreach ($notifications as $notification) {
             $h = App::makeWith($notification->type, ['patient' => $patient]);
@@ -70,7 +70,7 @@ class NotificationsController extends PatientApiController
     {
         $patient = PatientAuth::patient();
         $unread_notifications_count = Notification::query()->where("notifiable_id", $patient->id)
-            ->where("notifiable_type", "App\Patient")->where('read_at', null)->count();
+            ->where("notifiable_type", "App\Models\Patient")->where('read_at', null)->count();
 
         return response()->json(['has_new_notifications' => $unread_notifications_count > 0]);
     }
@@ -94,7 +94,7 @@ class NotificationsController extends PatientApiController
         $n = Notification::query()
             ->where("id", '=', $request->id)
             ->where("notifiable_id", $patient->id)
-            ->where("notifiable_type", "App\Patient")->first();
+            ->where("notifiable_type", "App\Models\Patient")->first();
 
         $n->read_at = Carbon::now('UTC');
         $n->save();

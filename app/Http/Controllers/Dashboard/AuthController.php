@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Admin;
-use App\AdminRecover;
+use App\Models\Admin;
+use App\Models\AdminRecover;
 use App\Mail\AdminResetPassword;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;

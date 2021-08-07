@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <title>@yield('title')</title>
-    <link rel="apple-touch-icon" href="{{App\Setting::where('key', 'icon_image')->first() ? url(App\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{App\Setting::where('key', 'icon_image')->first() ? url(App\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
+    <link rel="apple-touch-icon" href="{{App\Models\Setting::where('key', 'icon_image')->first() ? url(App\Models\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{App\Models\Setting::where('key', 'icon_image')->first() ? url(App\Models\Setting::where('key', 'icon_image')->first()->value) : url("assets/images/logo.png")}}">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
         rel="stylesheet">

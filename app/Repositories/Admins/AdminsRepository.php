@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Admins;
 
-use App\Admin;
+use App\Models\Admin;
 use App\Repositories\BaseRepository;
 
 class AdminsRepository extends BaseRepository implements AdminsRepositoryInterface

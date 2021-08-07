@@ -2,7 +2,7 @@
 
 namespace App\Auth\Api\v1;
 
-use App\PatientDevice;
+use App\Models\PatientDevice;
 
 class PatientAuthentication
 {

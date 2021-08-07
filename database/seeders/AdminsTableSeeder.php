@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Admin;
+use App\Models\Admin;
 use Illuminate\Database\Seeder;
 
 class AdminsTableSeeder extends Seeder
@@ -16,7 +16,7 @@ class AdminsTableSeeder extends Seeder
     {
         $admin = Admin::query()->firstOrCreate(
             ['email' => 'admin@admin.com'],
-            ['name' => 'Admin', 'password' => md5('password')]
+            ['name' => 'Admin', 'password' => md5('password'), 'email_verified_at' => date('Y-m-d H:i:s')]
         );
         $admin->assignRole('Administrator');
     }

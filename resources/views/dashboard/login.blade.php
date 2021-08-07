@@ -13,7 +13,7 @@
                                 <div class="card-header border-0">
                                     <div class="card-title text-center">
                                         <div class="p-1">
-                                            <img src="{{url(App\Setting::where('key', 'logo_image')->first() ? App\Setting::where('key', 'logo_image')->first()->value : url("assets/images/logo.png"))}}"
+                                            <img src="{{url(App\Models\Setting::where('key', 'logo_image')->first() ? App\Models\Setting::where('key', 'logo_image')->first()->value : url("assets/images/logo.png"))}}"
                                                  alt="branding logo" width="55" style="border-radius: 5px">
                                         </div>
                                     </div>

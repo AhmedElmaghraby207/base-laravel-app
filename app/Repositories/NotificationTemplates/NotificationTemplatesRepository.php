@@ -2,7 +2,7 @@
 
 namespace App\Repositories\NotificationTemplates;
 
-use App\NotificationTemplate;
+use App\Models\NotificationTemplate;
 use App\Repositories\BaseRepository;
 
 class NotificationTemplatesRepository extends BaseRepository implements NotificationTemplatesRepositoryInterface

@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Notifications;
 
-use App\Notification;
+use App\Models\Notification;
 use App\Repositories\BaseRepository;
 
 class NotificationsRepository extends BaseRepository implements NotificationsRepositoryInterface

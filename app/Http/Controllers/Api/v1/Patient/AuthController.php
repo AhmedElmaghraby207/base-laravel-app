@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Api\v1\Patient;
 use App\Facades\PatientAuthenticateFacade as PatientAuth;
 use App\Mail\PatientEmailVerification;
 use App\Mail\PatientResetPassword;
-use App\Notification;
-use App\Patient;
-use App\PatientDevice;
-use App\PatientRecover;
+use App\Models\Notification;
+use App\Models\Patient;
+use App\Models\PatientDevice;
+use App\Models\PatientRecover;
 use App\Transformers\PatientTransformer;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
@@ -183,7 +183,7 @@ class AuthController extends PatientApiController
 
                 $unread_notifications_count = Notification::query()
                     ->where("notifiable_id", $patient['data']['id'])
-                    ->where("notifiable_type", "App\Patient")
+                    ->where("notifiable_type", "App\Models\Patient")
                     ->where('read_at', null)->count();
                 $patient['data']['has_new_notifications'] = $unread_notifications_count > 0;
 
@@ -415,7 +415,7 @@ class AuthController extends PatientApiController
 
             $unread_notifications_count = Notification::query()
                 ->where("notifiable_id", $patient['data']['id'])
-                ->where("notifiable_type", "App\Patient")
+                ->where("notifiable_type", "App\Models\Patient")
                 ->where('read_at', null)->count();
             $patient['data']['has_new_notifications'] = $unread_notifications_count > 0;
 
@@ -508,7 +508,7 @@ class AuthController extends PatientApiController
 
             $unread_notifications_count = Notification::query()
                 ->where("notifiable_id", $patient['data']['id'])
-                ->where("notifiable_type", "App\Patient")
+                ->where("notifiable_type", "App\Models\Patient")
                 ->where('read_at', null)->count();
             $patient['data']['has_new_notifications'] = $unread_notifications_count > 0;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -32,11 +32,6 @@ class Patient extends Model
         }
     }
 
-    public function branch()
-    {
-        return $this->belongsTo('App\Branch', 'branch_id');
-    }
-
     public function firebase_tokens()
     {
         return Patient::where('email', $this->email)
@@ -45,10 +40,5 @@ class Patient extends Model
             ->get()
             ->pluck('firebase_token')
             ->toArray();
-    }
-
-    public function weights(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany('App\PatientWeight', 'PatientId');
     }
 }

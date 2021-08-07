@@ -2,8 +2,8 @@
 
 namespace App\Mail;
 
-use App\Admin;
-use App\Patient;
+use App\Models\Admin;
+use App\Models\Patient;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;

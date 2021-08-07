@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Admin;
+use App\Models\Admin;
 use App\Repositories\Admins\AdminsRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Notifications\P_DrinkWater;
-use App\Patient;
+use App\Models\Patient;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 

@@ -3,7 +3,7 @@
 namespace App\Jobs;
 
 use App\Notifications\P_DrinkWater;
-use App\Patient;
+use App\Models\Patient;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;

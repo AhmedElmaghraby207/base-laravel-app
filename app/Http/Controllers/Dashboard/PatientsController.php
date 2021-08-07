@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Patient;
+use App\Models\Patient;
 use App\Repositories\Patients\PatientsRepositoryInterface;
 use Carbon\Carbon;
 use Illuminate\Http\Request;

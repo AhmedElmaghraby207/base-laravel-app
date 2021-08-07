@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\v1\Patient;
 
-use App\Setting;
+use App\Models\Setting;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;

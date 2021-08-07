@@ -247,7 +247,7 @@
                             );
                             @endif
                             if (oData.id !== {{session()->get('user_admin')->id}}) {
-                                @if(session()->get('user_admin')->can('admin-delete') && App\Admin::find(session()->get('user_admin')->id))
+                                @if(session()->get('user_admin')->can('admin-delete') && App\Models\Admin::find(session()->get('user_admin')->id))
                                 $(nTd).append(
                                     "<a href='javascript:' url='{{url('/dashboard/admin/')}}/" + oData.id + "/delete' onclick='destroy(" + oData.id + ")' id='delete_" + oData.id + "' class='btn btn-danger btn-sm' title='@lang('main.delete_button')'><i class='fa fa-trash-alt'></i></a>"
                                 );

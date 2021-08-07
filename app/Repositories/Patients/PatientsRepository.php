@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Patients;
 
-use App\Patient;
+use App\Models\Patient;
 use App\Repositories\BaseRepository;
 
 class PatientsRepository extends BaseRepository implements PatientsRepositoryInterface

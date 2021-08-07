@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Branch;
-use App\Faq;
-use App\Message;
-use App\Patient;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Patient;
 
 use App\Http\Controllers\Controller;
-use App\Patient;
-use App\PatientRecover;
+use App\Models\Patient;
+use App\Models\PatientRecover;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
